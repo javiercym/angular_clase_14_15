@@ -1,0 +1,27 @@
+
+<div class="container">
+    <br>
+    <h2>{{titulo}}</h2>
+    <button (click)="cambiarboton()">{{textoboton}}</button>
+
+    <div *ngIf="estadoDiv">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quae laborum itaque explicabo tenetur natus nam? Nesciunt numquam dolores dignissimos.
+    </div>
+    <p></p>
+    <h4>Two way binding</h4>
+    <p>{{parrafo}}</p>
+
+    <span>escribir tu parrafo:</span><br>
+    <input [(ngModel)]="parrafo" type="text">
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="container">
+    <h3> COMPONENTE PADRE</h3>
+    <input [(ngModel)]="textoEnviar" type="text">
+    
+    <app-hijo [texto]="textoEnviar"></app-hijo>
+</div>
